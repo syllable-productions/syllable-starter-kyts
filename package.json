@@ -1,19 +1,32 @@
 {
-  "name": "kyt-starter-universal-src",
-  "private": true,
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "name": "syllable-starter-kyts",
+  "description": "Thin boilerplate starters built on top of the NYT KYT universal react starter kit.",
+  "version": "0.0.1",
+  "main": "",
+  "scripts": {
+    "dev": "kyt dev",
+    "build": "kyt build",
+    "start": "node build/server/main.js",
+    "start:debug": "node --inspect build/server/main.js",
+    "proto": "kyt proto",
+    "test": "kyt test",
+    "test-watch": "kyt test -- --watch",
+    "test-coverage": "kyt test -- --coverage",
+    "lint": "npm run lint-script && npm run lint-style",
+    "lint-script": "kyt lint-script",
+    "lint-style": "kyt lint-style",
+    "kyt:help": "kyt --help"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nytimes/kyt/packages/kyt-starter-universal.git"
+    "url": "git+https://github.com/syllable-productions/syllable-starter-kyts.git"
   },
   "author": "",
-  "license": "Apache-2.0",
+  "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/nytimes/kyt/issues"
+    "url": "https://github.com/syllable-productions/syllable-starter-kyts/issues"
   },
-  "homepage": "https://github.com/nytimes/kyt/packages/kyt-starter-universal#readme",
+  "homepage": "https://github.com/syllable-productions/syllable-starter-kyts#readme",
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "babel-preset-kyt-react": "0.3.0",
@@ -29,6 +42,5 @@
     "kyt": "1.0.0-alpha.3",
     "react-addons-test-utils": "15.3.0",
     "react-hot-loader": "3.0.0-beta.6"
-  },
-  "version": "1.0.0-alpha.3"
+  }
 }
