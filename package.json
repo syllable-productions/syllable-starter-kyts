@@ -1,0 +1,34 @@
+{
+  "name": "kyt-starter-universal-src",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nytimes/kyt/packages/kyt-starter-universal.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/nytimes/kyt/issues"
+  },
+  "homepage": "https://github.com/nytimes/kyt/packages/kyt-starter-universal#readme",
+  "dependencies": {
+    "babel-polyfill": "6.26.0",
+    "babel-preset-kyt-react": "0.3.0",
+    "compression": "1.6.2",
+    "express": "4.15.3",
+    "prop-types": "^15.6.1",
+    "react": "15.3.0",
+    "react-dom": "15.3.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "enzyme": "2.4.1",
+    "kyt": "1.0.0-alpha.3",
+    "react-addons-test-utils": "15.3.0",
+    "react-hot-loader": "3.0.0-beta.6"
+  },
+  "version": "1.0.0-alpha.3"
+}
