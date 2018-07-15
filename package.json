@@ -14,7 +14,9 @@
     "test-coverage": "kyt test -- --coverage",
     "lint": "npm run lint-script && npm run lint-style",
     "lint-script": "kyt lint-script",
+    "lint-script-fix": "kyt lint-script -- --fix",
     "lint-style": "kyt lint-style",
+    "lint-style-fix": "kyt lint-style -- --fix",
     "kyt:help": "kyt --help"
   },
   "repository": {

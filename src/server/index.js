@@ -6,6 +6,7 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import ClientApp from '../components/App';
+// eslint-disable-next-line import/no-restricted-paths
 import template from './template';
 import serverExtend from '../server-extend';
 import { getMetaTags } from '../helpers';
