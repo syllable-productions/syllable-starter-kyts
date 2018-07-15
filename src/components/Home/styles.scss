@@ -1,6 +1,6 @@
-
 @import '../../shared-styles/variables';
 
-.paragraph + .paragraph {
-  padding-top: $padding;
-}
+// If we need to reference materialize variables or mixins, import this instead of the full build
+// Otherwise it will re-bundle the materialize css.
+@import '../../shared-styles/materialize/materialize-variables';
+

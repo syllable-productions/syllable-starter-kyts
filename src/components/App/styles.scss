@@ -1,5 +1,10 @@
 @import '../../shared-styles/variables';
 
-.container {
-  padding: $padding;
+// import materialize globally
+:global {
+  @import '../../shared-styles/materialize/index.scss';
+  // Note, this is the only place where we should import this.
+  // For performance reasons, anywhere else that needs to reference
+  // materialize should reference materialize/materialize-variables'.
 }
+

@@ -20,7 +20,9 @@ export default vo => `
       ? '<link rel="stylesheet" type="text/css" href="' + vo.mainCSSBundle + '">'
       : ''}
 
-    <title>Universal React Starter Kyt</title>
+    <link data-react-helmet="true" rel="canonical" href="${vo.metaTags.canonical}">
+    <meta data-react-helmet="true" name="title" content="${vo.metaTags.title}" />
+    <title data-react-helmet="true">${vo.metaTags.title}</title>
   </head>
 
   <body>
