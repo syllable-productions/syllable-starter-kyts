@@ -17,12 +17,11 @@ coverage
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
 # Dependency directory
 node_modules
-!e2e_tests/fixtures/**/node_modules
+
+# build directory
+build
 
 # Optional npm cache directory
 .npm
@@ -33,12 +32,5 @@ node_modules
 # OS-specific temporary files
 Thumbs.db
 .DS_Store
-cli-test
-test-packages
-
-# Local stuff
-packages/kyt-starter-*/starter-src/build
-
-.vscode
 
 .env
