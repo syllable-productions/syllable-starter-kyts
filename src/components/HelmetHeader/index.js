@@ -11,9 +11,7 @@ class HelmetHead extends Component {
     return (
       <Helmet>
         <meta name="title" content={metaTags.title} />
-        <title>
-          {metaTags.title}
-        </title>
+        <title>{metaTags.title}</title>
         <link rel="canonical" href={metaTags.canonical} />
       </Helmet>
     );
