@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { getMetaTags } from '../../helpers';
 
