@@ -1,0 +1,73 @@
+// todo: move this to a component instead
+
+:global {
+  .corner-ribbon-wrap {
+
+    .corner-ribbon{
+      opacity: .8;
+
+      &:hover{
+        opacity: 1;
+      }
+
+      z-index: 1000;
+      width: 200px;
+      position: absolute;
+      top: 25px;
+      left: -50px;
+      text-align: center;
+      line-height: 50px;
+      letter-spacing: 1px;
+      color: #f0f0f0;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+
+      background: #b3bfb6;
+      color: white;
+    }
+
+    /* Custom styles */
+
+    .corner-ribbon.sticky{
+      position: fixed;
+    }
+
+    .corner-ribbon.shadow{
+      box-shadow: 0 0 3px rgba(0,0,0,.6);
+    }
+
+    /* Different positions */
+
+    .corner-ribbon.top-left{
+      top: 25px;
+      left: -50px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    .corner-ribbon.top-right{
+      top: 25px;
+      right: -50px;
+      left: auto;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    .corner-ribbon.bottom-left{
+      top: auto;
+      bottom: 25px;
+      left: -50px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    .corner-ribbon.bottom-right{
+      top: auto;
+      right: -50px;
+      bottom: 25px;
+      left: auto;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+  }
+}

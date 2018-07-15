@@ -1,11 +1,11 @@
 import React from 'react';
 
-function TestPage() {
+function WritePage() {
   return (
     <section>
-      <h1>Test Page</h1>
+      <h1>Write Page</h1>
     </section>
   );
 }
 
-export default TestPage;
+export default WritePage;

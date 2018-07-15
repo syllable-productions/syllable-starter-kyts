@@ -1,7 +1,9 @@
 import React, { PropTypes } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../components/Home';
-import TestPage from '../components/TestPage';
+import AboutPage from '../components/AboutPage';
+import LettersPage from '../components/LettersPage';
+import WritePage from '../components/WritePage';
 
 // with guidance from https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/server-rendering.md
 const Status = ({ code, children }) => (
@@ -38,7 +40,9 @@ function Routes() {
   return (
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route path="/test-page" component={TestPage} />
+      <Route path="/about" component={AboutPage} />
+      <Route path="/letters" component={LettersPage} />
+      <Route path="/write" component={WritePage} />
       <Route component={NotFound} />
     </Switch>
   );
