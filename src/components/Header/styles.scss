@@ -1,6 +1,7 @@
-
 @import '../../shared-styles/variables';
 
-.tool + .tool {
-  padding-top: 5px;
+nav {
+  li {
+    margin: 1rem;
+  }
 }

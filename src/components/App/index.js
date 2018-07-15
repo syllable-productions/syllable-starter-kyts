@@ -1,25 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
 import styles from './styles.scss';
+import HelmetHeader from '../HelmetHeader';
+import Header from '../Header';
 import Routes from '../../routes/';
 
-export default function App() {
-  return (
-    <div>
-      <i className={styles.logo} />
-      <ul className={styles.nav}>
-        <li className={styles.navItem}>
-          <Link className={styles.link} to="/">
-            Home
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link className={styles.link} to="/tools">
-            Tools
-          </Link>
-        </li>
-      </ul>
-      <div className={styles.content}>{Routes}</div>
+const App = () =>
+  <div>
+    <HelmetHeader />
+    <Header />
+    <div className={styles.container}>
+      {Routes}
     </div>
-  );
-}
+  </div>;
+
+export default App;

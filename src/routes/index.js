@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../components/Home';
-import Tools from '../components/Tools';
+import TestPage from '../components/TestPage';
 
 // with guidance from https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/server-rendering.md
-const Status = ({ code, children }) => (
+const Status = ({ code, children }) =>
   <Route
     render={({ staticContext }) => {
       // there is no `staticContext` on the client, so
@@ -15,32 +15,31 @@ const Status = ({ code, children }) => (
 
       return children;
     }}
-  />
-);
+  />;
 
-const RedirectWithStatus = ({ from, to, status }) => (
+const RedirectWithStatus = ({ from, to, status }) =>
   <Status code={status}>
     <Redirect from={from} to={to} />
-  </Status>
-);
+  </Status>;
 
-const NotFound = () => (
+const NotFound = () =>
   <Status code={404}>
     <div>
       <h1>Sorry, can’t find that.</h1>
     </div>
-  </Status>
-);
+  </Status>;
 
 // Note: A redirect can be added in this form
 // <RedirectWithStatus status={301} from="/old" to="/new" />
-const Routes = (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route path="/tools" component={Tools} />
-    <Route component={NotFound} />
-  </Switch>
-);
+function Routes() {
+  return (
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/test-page" component={TestPage} />
+      <Route component={NotFound} />
+    </Switch>
+  );
+}
 
 Status.propTypes = {
   code: PropTypes.number.isRequired,
@@ -53,4 +52,4 @@ RedirectWithStatus.propTypes = {
   status: PropTypes.number.isRequired,
 };
 
-export default Routes;
+export default Routes();

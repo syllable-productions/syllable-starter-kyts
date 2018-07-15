@@ -7,10 +7,15 @@ import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import ClientApp from '../components/App';
 import template from './template';
+import serverExtend from '../server-extend';
+import { getMetaTags } from '../helpers';
 
 const clientAssets = require(KYT.ASSETS_MANIFEST); // eslint-disable-line import/no-dynamic-require
 const port = parseInt(KYT.SERVER_PORT, 10);
-const app = express();
+
+let app = express();
+
+app = serverExtend(app);
 
 // Remove annoying Express header addition.
 app.disable('x-powered-by');
@@ -53,6 +58,7 @@ app.get('*', (request, response) => {
       mainJSBundle: clientAssets['main.js'],
       vendorJSBundle: clientAssets['vendor.js'],
       mainCSSBundle: clientAssets['main.css'],
+      metaTags: getMetaTags(request.url),
     })
   );
 
