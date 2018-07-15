@@ -3,7 +3,9 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../components/Home';
 import AboutPage from '../components/AboutPage';
 import LettersPage from '../components/LettersPage';
+import SingleLetterPage from '../components/SingleLetterPage';
 import WritePage from '../components/WritePage';
+import RouterWrapper from '../components/RouterWrapper';
 
 // with guidance from https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/guides/server-rendering.md
 const Status = ({ code, children }) => (
@@ -39,9 +41,10 @@ const NotFound = () => (
 function Routes() {
   return (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={RouterWrapper(Home)} />
       <Route path="/about" component={AboutPage} />
-      <Route path="/letters" component={LettersPage} />
+      <Route exact path="/letters" component={RouterWrapper(LettersPage)} />
+      <Route path="/letters/:slug" component={RouterWrapper(SingleLetterPage)} />
       <Route path="/write" component={WritePage} />
       <Route component={NotFound} />
     </Switch>

@@ -41,7 +41,8 @@ function Header() {
   );
 }
 
-{/*
+{
+  /*
 <div className="section-header">
   <div className="navigation js-navigation">
     <a className="nav-toggle js-nav-toggle" href="#nav">
@@ -63,6 +64,7 @@ function Header() {
     </nav>
   </div>
 </div>
-*/}
+*/
+}
 
 export default Header;

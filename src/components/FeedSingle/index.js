@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Letter from '../Letter';
 
-class Feed extends Component {
+class FeedSingle extends Component {
   render() {
-    const { lettersData } = this.props;
+    const { letterData } = this.props;
 
     return (
-      <div className="feed">
+      <div className="feed feed-single">
         <div className="feed-inner page-inner">
           <div className="letters-list">
-            {lettersData && lettersData.map(letter => <Letter {...letter} key={letter.slug} />)}
+            <Letter {...letterData} isSingleLetter key={letterData.slug} />
           </div>
         </div>
       </div>
@@ -17,4 +17,4 @@ class Feed extends Component {
   }
 }
 
-export default Feed;
+export default FeedSingle;

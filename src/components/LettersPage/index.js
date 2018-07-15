@@ -1,38 +1,23 @@
-import React from 'react';
-// todo: #tempFakeData
-const isSingleLetter = null;
-const source = {
-  link: 2524,
-  title: 2423,
-};
+import React, { Component } from 'react';
+import Feed from '../Feed';
 
-const tags = [
-  'foo',
-  'bar',
-];
+class LettersPage extends Component {
+  render() {
+    const { lettersData } = this.props;
 
-function LettersPage() {
-  return (
-    <section>
-      <div className="article">
-        <div className="article-inner">
-          <h2 className="h2 header-small">
-            <a href="/letters">Letters recommended for you</a>
-          </h2>
+    return (
+      <section>
+        <div className="article">
+          <div className="article-inner">
+            <h2 className="h2 header-small">
+              <a href="/letters">Letters recommended for you</a>
+            </h2>
+          </div>
+          {lettersData && <Feed lettersData={lettersData} />}
         </div>
-        { isSingleLetter &&
-          <span>
-            feed-single
-          </span>
-        }
-        { !isSingleLetter &&
-          <span>
-            feed
-          </span>
-        }
-      </div>
-    </section>
-  );
+      </section>
+    );
+  }
 }
 
 export default LettersPage;

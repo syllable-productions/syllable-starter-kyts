@@ -8,9 +8,7 @@ const Preface = () => (
         <img src="images/dear-nation-logo.svg" />
       </h1>
       <div className="header-section">
-        <p>
-          Dear Nation is a living archive of the letters we write to our nation's leaders.
-        </p>
+        <p>Dear Nation is a living archive of the letters we write to our nation's leaders.</p>
         <p>
           <a href="/write">Write</a> a letter.
         </p>
@@ -19,7 +17,7 @@ const Preface = () => (
           <a href="/letters">Discover</a> and share the voices that need to be heard.
         </p>
       </div>
-      {/*>"./partials/email-capture"/*/}
+      {/* >"./partials/email-capture"/ */}
     </div>
   </div>
 );
