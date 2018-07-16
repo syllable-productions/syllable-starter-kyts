@@ -41,6 +41,7 @@ function Header() {
   );
 }
 
+// eslint-disable-next-line
 {
   /*
 <div className="section-header">

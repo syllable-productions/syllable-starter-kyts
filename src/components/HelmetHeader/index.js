@@ -1,10 +1,10 @@
-import React, { PropTypes, Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { getMetaTags } from '../../helpers';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class HelmetHead extends Component {
+class HelmetHead extends PureComponent {
   render() {
     const metaTags = getMetaTags(this.props.location.pathname);
 

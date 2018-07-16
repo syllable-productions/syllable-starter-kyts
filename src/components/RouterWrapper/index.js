@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import { letters } from '../../test-data';
 
 function RouterWrapper(WrappedComponent) {
-  class Extender extends Component {
+  class Extender extends PureComponent {
     constructor() {
       super();
 
       this.state = {
         routeError: null,
         slug: null,
-        lettersData: null,
+        lettersData: [],
         isSingleLetter: null,
       };
     }

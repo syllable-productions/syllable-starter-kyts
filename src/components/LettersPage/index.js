@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import Feed from '../Feed';
 
-class LettersPage extends Component {
+class LettersPage extends PureComponent {
   render() {
     const { lettersData } = this.props;
 
@@ -19,5 +20,10 @@ class LettersPage extends Component {
     );
   }
 }
+
+LettersPage.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  lettersData: PropTypes.array.isRequired,
+};
 
 export default LettersPage;

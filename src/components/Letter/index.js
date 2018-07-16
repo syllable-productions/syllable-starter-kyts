@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import Dialogs from '../Dialogs';
 
-const isSingleLetter = false;
-
-class Letter extends Component {
+class Letter extends PureComponent {
   render() {
     const {
       title,
-      slug,
       url,
       date,
       source,
@@ -44,15 +42,33 @@ class Letter extends Component {
         )}
         {!isSingleLetter && <p className="summary">{summary}</p>}
 
-        <div className="tags">
-          {tags &&
-            tags.map(tag => {
-              <span>{tag}</span>;
-            })}
-        </div>
+        <div className="tags">{tags && tags.map(tag => <span key={tag}>{tag}</span>)}</div>
       </div>
     );
   }
 }
+
+Letter.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  date: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  source: PropTypes.object,
+  summary: PropTypes.string,
+  fulltext: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  dialogs: PropTypes.array.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  tags: PropTypes.array.isRequired,
+  isSingleLetter: PropTypes.bool,
+};
+
+Letter.defaultProps = {
+  date: null,
+  source: {},
+  summary: null,
+  fulltext: null,
+  isSingleLetter: false,
+};
 
 export default Letter;

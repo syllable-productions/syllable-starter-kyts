@@ -1,14 +1,16 @@
 import React from 'react';
 
+const blurb = `Dear Nation is a living archive of the letters we write to our nation's leaders.`;
+
 const Preface = () => (
   <div className="preface-fixed">
     <div className="preface-inner">
       <h1 className="h1">
         <span className="hide">Dear Nation</span>
-        <img src="images/dear-nation-logo.svg" />
+        <img src="images/dear-nation-logo.svg" alt="dear nation logo" />
       </h1>
       <div className="header-section">
-        <p>Dear Nation is a living archive of the letters we write to our nation's leaders.</p>
+        <p>{blurb}</p>
         <p>
           <a href="/write">Write</a> a letter.
         </p>
