@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// eslint-disable-next-line no-unused-vars
 import styles from './styles.scss';
 
 function Header() {
   return (
     <section>
       <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
+        <ul className={styles.navMenu}>
+          <li className={styles.navItem}>
+            <Link className={styles.link} to="/">
+              Home
+            </Link>
           </li>
-          <li>
-            <Link to="/test-page">TestPage</Link>
+          <li className={styles.navItem}>
+            <Link className={styles.link} to="/test-page">
+              Test Page
+            </Link>
           </li>
         </ul>
       </nav>

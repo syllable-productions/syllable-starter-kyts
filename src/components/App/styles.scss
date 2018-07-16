@@ -1,5 +1,8 @@
 @import '../../shared-styles/variables';
 
-.container {
-  padding: $padding;
+// used for global styles. :global{} changes the scope to outside the component.
+:global {
+  section {
+    padding: $padding;
+  }
 }

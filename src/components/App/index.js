@@ -9,7 +9,7 @@ const App = () => (
   <div>
     <HelmetHeader />
     <Header />
-    <div className={styles.container}>{Routes}</div>
+    <div className="container">{Routes}</div>
   </div>
 );
 

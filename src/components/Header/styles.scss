@@ -1,7 +1,11 @@
 @import '../../shared-styles/variables';
 
-nav {
-  li {
-    margin: 1rem;
-  }
+.navMenu {
+  margin-top: $padding;
+}
+
+.navItem {
+  float: left;
+  display: inline-block;
+  padding-right: $padding;
 }
