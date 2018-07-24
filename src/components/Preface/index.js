@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './styles.scss';
 
 const blurb = `Dear Nation is a living archive of the letters we write to our nation's leaders.`;
 

@@ -4,3 +4,38 @@
 // Otherwise it will re-bundle the materialize css.
 @import '../../shared-styles/materialize/materialize-variables';
 
+// todo #moveToModules
+:global {
+  // example of styles specfic to page
+  .page-home {
+    // todo: #backgroundStyle
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      right: 0;
+      height: 100%;
+      z-index: 1;
+      width: 50vw;
+      background: $color-grey-light;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .preface,
+    .feed {
+      padding-top: $feed-padding-top
+    }
+
+    .feed-wrap {
+      background: $color-grey-light;
+      // use border before the box-shadow to get a harder edge
+      border-left: $color-grey 2px solid;
+      box-shadow: $color-grey -2px 0 2px;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import './variables';
+@import './materialize/materialize-variables';
+
+// Note: This should be used sparingly.
+@media #{$large-and-up} {
+  .container {
+    width: $responsive-page-padding;
+    // max-width: $container-width;
+    max-width: none;
+    position: relative;
+  }
+
+}
+
+// Note: This should be the main responsive breakpoint
+@media #{$medium-and-down} {
+  .page {
+    .section-header {
+      position: absolute;
+    }
+  }
+
+  .page-home {
+    .section-header,
+    .feed-inner {
+      margin-left: (100% - $container-width-sm-perc) / 2;
+      margin-right: (100% - $container-width-sm-perc) / 2;
+    }
+    // for now, get that full-background
+    .container {
+      width: 100%;
+    }
+
+    // todo: #backgroundStyle
+    &:after {
+      display: none;
+    }
+
+    .feed-wrap {
+      border: 0;
+      box-shadow: none;
+      opacity:  .8;
+      position: relative;
+    }
+  }
+
+  .preface {
+    .preface-fixed {
+      position: relative;
+    }
+    .h1 img {
+      width: 50%;
+    }
+  }
+
+  // .feed {
+
+  //   .feed-inner {
+  //     padding-left: $feed-sm-padding-left;
+
+  //     .letter-idx {
+  //       padding-left: $feed-sm-padding-left
+  //     }
+  //     .letters-list {
+  //       margin-left: -$feed-sm-padding-left;
+  //     }
+  //   }
+  // }
+}
+
+// Note: Try to use this sparingly, just for tweaks to extra small screens
+@media #{$small-and-down} {
+  .feed {
+    .letter-idx {
+      margin-top: .125rem;
+    }
+
+    .h1,
+    .letter-idx {
+      font-size: $font-size-h2-sm;
+    }
+
+    section .letter-wrap {
+      padding: 0 1rem 0 3rem;
+    }
+
+    &.feed-single {
+      section .letter-wrap {
+        padding: 0;
+      }
+    }
+  }
+
+
+  .preface {
+    padding-top: 3rem;
+
+    .h1 {
+      margin-bottom: 0;
+    }
+
+    .header-section {
+      font-size: $font-size-h2-sm;
+    }
+
+    .preface-inner {
+      padding: 0 1rem;
+    }
+
+    .email-fields {
+      margin-top: 2rem;
+    }
+  }
+
+  .navigation {
+    .nav-toggle {
+      margin-top: 1.25rem;
+    }
+  }
+}

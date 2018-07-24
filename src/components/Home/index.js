@@ -1,22 +1,23 @@
 import React, { PureComponent } from 'react';
+import Page from '../Page';
 import PropTypes from 'prop-types';
-import styles from './styles.scss';
 import Preface from '../Preface';
 import Feed from '../Feed';
+import styles from './styles.scss';
 
 class Home extends PureComponent {
   render() {
     const { lettersData } = this.props;
 
     return (
-      <section className={styles.section}>
+      <Page pageName="home">
         <div className="row">
           <div className="col s12 l5">
             <Preface />
           </div>
           <div className="col s12 l7">{lettersData && <Feed lettersData={lettersData} />}</div>
         </div>
-      </section>
+      </Page>
     );
   }
 }

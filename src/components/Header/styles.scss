@@ -1,15 +1,85 @@
 @import '../../shared-styles/variables';
+@import '../../shared-styles/mixins';
 @import '../../shared-styles/ribbon';
 
-.comp {
-  padding: 0 $padding-md;
-}
+// todo #moveToModules
+:global {
+  .navigation {
+    .bar {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin-bottom: 4px;
+      background-color: $color-grey-dark;
+    }
 
-.brandLogo {
-  float: left;
-}
+    .nav {
+      position: fixed;
+      overflow: scroll;
+      top: 0;
+      left: 0;
+      min-height: 100vh;
+      min-width: 100vw;
+      background: $color-white;
+      opacity: 0;
+      visibility: hidden;
 
-.navMenu {
-  float: right;
-}
+      z-index: 1;
+      transition: all 300ms linear;
+      text-align: center;
 
+      // make the close X look centered
+      padding-top: .6rem;
+
+      @include emboss-on-white();
+
+      a {
+        @include header-text();
+
+        line-height: $font-size-site * 4;
+        display: block;
+        clear: both;
+        opacity: $opacity-unhover;
+
+        &:hover {
+          opacity: 1;
+          background: $color-grey-light;
+          // span {
+          //   @include underline();
+          // }
+        }
+      }
+    }
+
+    .nav-toggle {
+      position: absolute;
+      z-index: 2;
+      margin-top: 2rem;
+
+      i {
+        transition: all 300ms linear;
+      }
+    }
+
+    &.is-open {
+      .bar-1,
+      .bar-4 {
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .bar-2 {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .bar-3 {
+        transform: translateY(0) rotate(-45deg);
+      }
+
+      .nav {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

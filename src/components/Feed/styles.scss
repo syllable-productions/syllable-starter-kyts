@@ -1,0 +1,134 @@
+@import '../../shared-styles/variables';
+@import '../../shared-styles/mixins';
+
+// todo #moveToModules
+:global {
+  .feed {
+    padding-top: $feed-padding-top;
+
+    p {
+      margin-bottom: 1.25rem;
+    }
+
+    &.feed-single {
+      section:before {
+        display: none;
+      }
+    }
+
+    .h1, .h2 {
+      @include header-text();
+      @include emboss();
+      font-family: $font-header;
+      font-size: $font-size-h2;
+      margin-bottom: $margin-header;
+    }
+
+    .header-section {
+      margin-bottom: 2rem;
+
+      .h1 {
+        margin-bottom: $margin-header-tight;
+      }
+
+      .date {
+        @include header-small();
+        // color: $color-text-light;
+        // font-weight: $font-weight-bold;
+        // letter-spacing: normal;
+
+        margin-bottom: $margin-header-tight;
+      }
+
+      .source {
+        font-size: $font-size-small-x;
+
+        a {
+          color: inherit;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .letters-list {
+      .summary {
+        margin-bottom: 1rem;
+      }
+      .fulltext {
+        margin-bottom: 3rem;
+      }
+    }
+
+    section {
+      position: relative;
+      margin-bottom: $section-margin;
+      padding-top: $section-margin;
+
+      &:before {
+        content: '';
+        @include separator();
+      }
+
+      .letter-wrap {
+        color: $color-text-light;
+        line-height: $line-height-body;
+        padding-left: $feed-padding;
+        padding-right: $feed-padding;
+        // max-width: $page-inner-max-width;
+        margin: 0 auto;
+        // space to breathe at the bottom
+        margin-bottom: 4rem;
+
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+
+
+    .letter-idx {
+      @include emboss();
+      float: left;
+      color: $color-green-light;
+      opacity: .6;
+      font-size: 3.75rem;
+      font-weight: $font-weight-light;
+      // make it appear more v aligned
+      line-height: 0.8em;
+    }
+
+    .tags {
+      span {
+        background: $color-grey-light;
+        color: $color-olive;
+        color: $color-olive;
+        display: inline-block;
+        padding: .3rem .5rem;
+        margin-right: .25rem;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+
+        &:last-child {
+          margin-right: 0;
+          // todo
+        }
+      }
+    }
+
+    .dialog {
+      padding-top: 2rem;
+      border-top: 1px solid $color-grey-logo;
+    }
+  }
+
+  // temp
+  .feed-wrap {
+    .feed {
+      .tags {
+        span {
+          background: $color-white;
+        }
+      }
+    }
+  }
+}

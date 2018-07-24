@@ -1,3 +1,53 @@
-// example variable
-$color-brand: #ff2d58;
-$padding-md: 1rem;
+// todo: remove vals from demo
+$color-black: #111111;
+$color-white: #f8f8f8;
+$color-white-true: #ffffff;
+$color-grey-light: #f2f1ed;
+$color-grey-dark: #999999;
+$color-grey: #e6e5e2;
+$color-grey-logo: #bbbbbb;
+$color-olive: #063a00;
+$color-green-light: #8ea997;
+$color-form: $color-grey;
+$color-text-light: $color-grey-dark;
+$color-header: #454851;
+
+$font-site: 'open-sans', sans-serif;
+$font-header: 'adelle', sans-serif;
+$font-script: 'cursive', serif;
+$font-size-base: 16px;
+$font-size-site: 18px;
+$font-size-letter: 20px;
+$font-size-h1: 3.5rem;
+$font-size-h2: 1.875rem;
+$font-size-h2-sm: 1.625rem;
+$font-size-small: .875rem;
+$font-size-small-x: .75rem;
+$line-height-body: 1.3em;
+
+$letter-spacing-header: -.02em;
+$letter-spacing-header-h2: .05em;
+
+$font-weight-light: 300;
+$font-weight-bold: 600;
+$font-weight-bold-x: 800;
+
+$container-width: 81.25rem; //1300px;
+$transition-time: .25s;
+$transition-time-slow: 1s;
+
+$padding-modal: 3rem;
+$responsive-page-padding: 95vw;
+$opacity-modal-focused-ui: .1;
+$opacity-unhover: .85;
+
+$page-inner-max-width: 50rem;
+$feed-padding-top: 5rem;
+$feed-sm-padding-left: 1rem;
+
+$container-width-sm-perc: 90%;
+$section-margin: 1.75rem;
+$feed-padding: 6rem;
+$margin-header: 2rem;
+$margin-header-tight: .5rem;
+$avatar-size: 4rem;

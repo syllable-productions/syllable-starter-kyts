@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Dialogs from '../Dialogs';
+import styles from './styles.scss';
 
 class Letter extends PureComponent {
   render() {
@@ -17,7 +18,7 @@ class Letter extends PureComponent {
     } = this.props;
 
     return (
-      <div className="letter-wrap">
+      <div className={styles.letterWrap}>
         <div className="header-section">
           {isSingleLetter && <div className="date">{date}</div>}
           <a href={url}>

@@ -1,0 +1,85 @@
+@import '../../shared-styles/variables';
+@import '../../shared-styles/mixins';
+
+// todo: make nicer modules
+:global {
+  .page {
+    .container {
+      z-index: 2;
+      position: relative;
+    }
+
+    .section-header {
+      position: fixed;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .header-small {
+      margin-bottom: 1rem;
+      @include header-small();
+    }
+
+    .btn-modal-show {
+      margin-top: 10vh;
+    }
+
+    .no-margin {
+      margin-bottom: 0;
+    }
+
+    .page-inner {
+      max-width: $page-inner-max-width;
+      margin: 0 auto;
+    }
+
+      // todo: fix
+    .article {
+      padding-top: $feed-padding-top;
+
+      p {
+        line-height: $line-height-body;
+      }
+
+      .article-content{
+        position: relative;
+        padding-top: $section-margin;
+        max-width: $page-inner-max-width;
+        margin: 0 auto;
+
+        &:before {
+          content: '';
+          top: 0;
+          @include separator();
+        }
+      }
+    }
+
+    &:after {
+      // position: absolute;
+      // content: '';
+      // display: block;
+      // top: 0;
+      // right: 0;
+      // height: 100%;
+      // z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .preface,
+    .feed {
+      padding-top: $feed-padding-top
+    }
+
+    .feed-wrap {
+      background: $color-grey-light;
+      // use border before the box-shadow to get a harder edge
+      border-left: $color-grey 2px solid;
+      box-shadow: $color-grey -2px 0 2px;
+    }
+  }
+}

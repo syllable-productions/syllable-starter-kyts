@@ -13,4 +13,6 @@
 @import '../../../node_modules/materialize-css/sass/components/variables';
 
 // override some values
-$primary-color: $color-brand;
+
+// material-css overrides
+$button-height: 2.25rem; // translate to rem instead of 36px.

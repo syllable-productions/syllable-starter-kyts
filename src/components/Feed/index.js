@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Letter from '../Letter';
+import styles from './styles.scss';
 
 class Feed extends PureComponent {
   render() {

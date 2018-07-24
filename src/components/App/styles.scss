@@ -6,5 +6,45 @@
   // Note, this is the only place where we should import this.
   // For performance reasons, anywhere else that needs to reference
   // materialize should reference materialize/materialize-variables'.
-}
 
+  html {
+    font-size: $font-size-base;
+  }
+
+  body {
+    background: $color-white;
+    color: $color-black;
+    font-family: $font-site;
+    font-size: $font-size-site;
+    margin: 0;
+    padding: 0;
+
+    &.nav-open,
+    &.modal-open {
+      // block the scroll
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  a {
+    &:hover,
+    &:visited,
+    &:link,
+    &:active
+    {
+      text-decoration: none;
+    }
+  }
+
+  .h1,
+  .h2,
+  .h3,
+  .h4 {
+    margin: 0;
+    word-wrap: break-word;
+  }
+
+  // todo #moveToModules
+  @import '../../shared-styles/responsive';
+}

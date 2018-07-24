@@ -11,12 +11,9 @@ function AboutPage() {
         </div>
         <div className="article-content page-inner">
           <p>
-            Dear Nation is a living archive of the letters we write to our nation&#39;s leaders.
-            Read my
-            <a href="/letters/dear-president-meet-dear-nation">
-              letter to President Obama to tell him about the project.
-            </a>
-            More information coming soon.
+            <span>Dear Nation is a living archive of the letters we write to our nation&#39;s leaders. Read my</span>&nbsp;
+            <a href="/letters/dear-president-meet-dear-nation">letter to President Obama to tell him about the project.</a>&nbsp;
+            <span>More information coming soon.</span>
           </p>
         </div>
       </div>
