@@ -12,7 +12,7 @@ class Home extends PureComponent {
     return (
       <Page pageName="home">
         <div className="row">
-          <div className="col s12 l5">
+          <div className="col s12 l5 preface">
             <Preface />
           </div>
           <div className="col s12 l7 feed-wrap container-inner">
