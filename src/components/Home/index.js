@@ -15,7 +15,9 @@ class Home extends PureComponent {
           <div className="col s12 l5">
             <Preface />
           </div>
-          <div className="col s12 l7">{lettersData && <Feed lettersData={lettersData} />}</div>
+          <div className="col s12 l7 feed-wrap container-inner">
+            {lettersData && <Feed lettersData={lettersData} />}
+          </div>
         </div>
       </Page>
     );

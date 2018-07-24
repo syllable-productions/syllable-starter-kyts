@@ -18,7 +18,7 @@ class Letter extends PureComponent {
     } = this.props;
 
     return (
-      <div className={styles.letterWrap}>
+      <div className="letter-wrap">
         <div className="header-section">
           {isSingleLetter && <div className="date">{date}</div>}
           <a href={url}>
